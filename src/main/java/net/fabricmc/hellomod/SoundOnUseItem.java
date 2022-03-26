@@ -7,8 +7,8 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
-public class NoteItem extends Item {
-    public NoteItem(Settings settings) {
+public class SoundOnUseItem extends Item {
+    public SoundOnUseItem(Settings settings) {
         super(settings);
     }
      

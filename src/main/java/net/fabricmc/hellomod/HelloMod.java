@@ -15,7 +15,7 @@ public class HelloMod implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger("hellomod");
 
-	public static final NoteItem TEST_ITEM = new NoteItem(new FabricItemSettings().group(ItemGroup.MISC));
+	public static final SoundOnUseItem TEST_ITEM = new SoundOnUseItem(new FabricItemSettings().group(ItemGroup.MISC));
 
 	@Override
 	public void onInitialize() {
