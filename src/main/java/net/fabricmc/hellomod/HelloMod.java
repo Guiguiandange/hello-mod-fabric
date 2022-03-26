@@ -2,7 +2,6 @@ package net.fabricmc.hellomod;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -16,7 +15,7 @@ public class HelloMod implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger("hellomod");
 
-	public static final Item TEST_ITEM = new Item(new FabricItemSettings().group(ItemGroup.MISC));
+	public static final NoteItem TEST_ITEM = new NoteItem(new FabricItemSettings().group(ItemGroup.MISC));
 
 	@Override
 	public void onInitialize() {
