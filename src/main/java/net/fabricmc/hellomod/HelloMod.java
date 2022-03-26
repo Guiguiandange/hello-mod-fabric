@@ -15,7 +15,7 @@ public class HelloMod implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger("hellomod");
 
 	// Creating items
-	// TODO : damageable, take durability damage on une
+	// TODO : damageable, take durability damage on use
 	public static final SoundOnUseItem TEST_ITEM = new SoundOnUseItem(new FabricItemSettings());
 
 	// Creating item groups
