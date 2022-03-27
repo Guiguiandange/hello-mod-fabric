@@ -20,7 +20,7 @@ public class HelloMod implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger("hellomod");
 
 	// creating blocks
-	public static final Block TEST_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f, 20.0f));
+	public static final Block TEST_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f, 20.0f).requiresTool());
 
 	// Creating items
 	// TODO : damageable, take durability damage on use
