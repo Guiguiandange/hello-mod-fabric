@@ -17,7 +17,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class HelloMod implements ModInitializer {
-	public static final Logger LOGGER = LoggerFactory.getLogger("hellomod");
+	private static final String HELLOMOD_MODID = "hellomod";
+
+    public static final Logger LOGGER = LoggerFactory.getLogger(HelloMod.HELLOMOD_MODID);
 
 	// creating blocks
 	public static final Block TEST_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f, 20.0f).requiresTool());
@@ -27,7 +29,7 @@ public class HelloMod implements ModInitializer {
 	public static final SoundOnUseItem TEST_ITEM = new SoundOnUseItem(new FabricItemSettings());
 
 	// Creating item groups
-	public static final ItemGroup GENERAL_GROUP = FabricItemGroupBuilder.create(new Identifier("hellomod", "general"))
+	public static final ItemGroup GENERAL_GROUP = FabricItemGroupBuilder.create(new Identifier(HelloMod.HELLOMOD_MODID, "general"))
 			.icon(() -> new ItemStack(HelloMod.TEST_ITEM))
 			.appendItems(stacks -> {
 				stacks.add(new ItemStack(HelloMod.TEST_ITEM));
@@ -40,10 +42,10 @@ public class HelloMod implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
-		Registry.register(Registry.BLOCK, new Identifier("hellomod", "test_block"), HelloMod.TEST_BLOCK);
-		Registry.register(Registry.ITEM, new Identifier("hellomod", "test_block"), new BlockItem(HelloMod.TEST_BLOCK, new FabricItemSettings()));
+		Registry.register(Registry.BLOCK, new Identifier(HelloMod.HELLOMOD_MODID, "test_block"), HelloMod.TEST_BLOCK);
+		Registry.register(Registry.ITEM, new Identifier(HelloMod.HELLOMOD_MODID, "test_block"), new BlockItem(HelloMod.TEST_BLOCK, new FabricItemSettings()));
 
-		Registry.register(Registry.ITEM, new Identifier("hellomod", "test_item"), HelloMod.TEST_ITEM);
+		Registry.register(Registry.ITEM, new Identifier(HelloMod.HELLOMOD_MODID, "test_item"), HelloMod.TEST_ITEM);
 
 		LOGGER.info("Hello Fabric world!");
 	}

@@ -1,4 +1,4 @@
-package net.fabricmc.hellomod;
+package net.fabricmc.hellomod.items;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
